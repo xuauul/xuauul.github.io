@@ -1,0 +1,142 @@
+body, html{
+  height:100%;
+  margin:0;
+  font-size:16px;
+  font-family:"Lato", sans-serif;
+  font-weight:400;
+  line-height:1.8em;
+  color:#666;
+}
+
+.pimg1, .pimg2, .pimg3{
+  position:relative;
+  opacity:0.70;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+
+  /*
+    fixed = parallax
+    scroll = normal
+  */
+  background-attachment:fixed;
+}
+
+.pimg1{
+  background-image:url('../img/cover.jpg');
+  min-height:100%;
+}
+
+.pimg2{
+  background-image:url('../img/section2.jpg');
+  min-height:400px;
+}
+
+.pimg3{
+  background-image:url('../img/section3.jpg');
+  min-height:400px;
+}
+
+.section{
+  text-align:center;
+  padding:30px 50px;
+}
+
+.section-light{
+  background-color:#f4f4f4;
+  color:#666;
+}
+
+.section-dark{
+  background-color:#282e34;
+  color:#ddd;
+}
+
+.section-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reverse{
+  flex-direction: row-reverse;
+}
+
+.section-container > div{
+  width: 100%;
+  text-align: justify;
+  padding: 1rem;
+}
+
+.section-container.section-dark > div > img{
+  width: 90%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.section-container.section-light > div > img{
+  width: 90%;
+  padding: 5px;
+  border: 1px solid #666;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.section-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.song-text{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+
+.image-grid{
+  padding: 50px 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: normal;
+  row-gap: 50px;
+  text-align: justify;
+}
+
+.image-grid div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-grid img{
+  width: 80%;
+}
+
+.ptext{
+  position:absolute;
+  top:50%;
+  width:100%;
+  text-align:center;
+  color:#000;
+  font-size:27px;
+  letter-spacing:8px;
+  text-transform:uppercase;
+}
+
+.ptext .border{
+  background-color:#111;
+  color:#fff;
+  padding:20px;
+}
+
+.ptext .border.trans{
+  background-color:transparent;
+}
+
+@media(max-width:568px){
+  .pimg1, .pimg2, .pimg3{
+    background-attachment:scroll;
+  }
+}
